@@ -1,0 +1,218 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body{
+margin:0;
+background-color: #f7dbbc;
+display: grid;
+min-height: 100vh;
+}
+
+.grilla{
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+  "navbar"
+  "contenido"
+  "pie de pagina";
+  grid-template-rows:auto 1fr auto ;
+
+}
+
+nav{
+  background:#282726;
+  width: 100%;
+  height: 150px;
+}
+
+.enlace{
+  position: absolute;
+  padding: 20px 50px;
+}
+
+.logo{
+  height: 100px;
+}
+
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 150px;
+  margin: 0 5px;
+}
+nav ul li a{
+  padding: 8px 30px;
+  color: #282726;
+  background-color: #ff9500;
+  border-radius: 30px;
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 35px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+li a.active, li a:hover{
+  background: #D21A26;
+  transition: 0.5s;
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: #F2E8C2;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none; 
+}
+
+#check{
+  display: none;
+}
+
+.pie-de-pagina {
+    background-color: #00562f;
+    padding: 1em 0;
+    color: #fffbd6;
+    text-align: center;
+    margin-top: auto;
+}
+
+.pie-de-pagina .grupo-1 {
+    width: 100%;
+    /* margin: auto; */
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    padding: 5px 0px;
+}
+
+.pie-de-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-de-pagina .grupo-1 .box figure img {
+    width: 80px;
+    height: auto;
+}
+
+.box { 
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-left: 35px;
+    line-height: 17px;
+}
+.pie-de-pagina .grupo-1 .box figure h2 {
+    margin-left: auto;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.pie-de-pagina .grupo-1 .box p {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.pie-de-pagina .grupo-1 .red-social i {
+    display: inline-block;
+    text-decoration: none;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    color: #282726;
+    margin-top: 25px;
+    margin-right: 10px;
+    background-color: #ff9500;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.5ms;
+}
+
+.pie-de-pagina .grupo-1 .red-social i:hover {
+    background-color: #998989;
+}
+.pie-de-pagina .grupo-2 {
+    background-color: #D21A26;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fffbd6;
+}
+
+img {
+    grid-area: pie-de-pagina;
+    height: 150px;
+}
+
+/* PC escritorio */
+/*@media (max-width: 952px)
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .enlace{
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+}
+
+/* Celular (pantallas menores o iguales a 767px) */
+@media (max-width: 767px) {
+.checkbtn {
+  display: block;
+}
+ul{
+  position: fixed;
+  width: 50%;
+  height: 50vh;
+  background: #ff9500;
+  top: 150px;
+  left: -100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+nav ul li{
+  display: block;
+  margin: 50px 0;
+  line-height: 30px;
+}
+nav ul li a{
+  font-size: 20px;
+}
+li a:hover, li a.active{
+  background: #4AB165;
+}
+#check:checked ~ ul{
+  left: 0;
+}
+}
+
+/* Paleta de colores 
+#022601
+#FE3E00
+#FFD7B7
+#282726
+#00562F
+#FF9500
+#4AB165
+ */
